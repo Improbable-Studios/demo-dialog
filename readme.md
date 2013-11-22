@@ -3,7 +3,7 @@
 Below are the barebone steps: 
 
 * Create a new 2D project. 
-* For each talking character, create a GameObject. Bind a script to this object. The script is doing the talking. 
+* For each talking character, create a GameObject. Bind a script to this object. The script is doing the talking. (`Assets/talk.js`)
 * The logic of dialog is very simple: 
 	* create a `GUIText` object for displaying the dialog and bind to the character object. 
 	* store all possible lines in an array (or can read from a file). You'll be able to modify the string array in Unity's GUI after binding the script to the character object. 
