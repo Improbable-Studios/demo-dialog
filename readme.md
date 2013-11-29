@@ -2,9 +2,13 @@
 
 * [Here](http://cgcookie.com/unity/2012/02/20/unity-script-npc-talk-system/) is a good tutorial on how to use Unity for a dialog system. 
 
-###Main
+### Instructions
 
-Press left ctrl to see dialogs
+1. Go to Edit --> Project settings --> Input and create a new input control with name "talk" and positive button = "left ctrl"
+
+2. Launch. Press left ctrl to see dialogs. 
+
+###Main
 
 Implemented a `line` class and `Speak` function that will: 
 
