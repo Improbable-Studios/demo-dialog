@@ -54,8 +54,8 @@ lines[3] = new line("Sherlock", "No",rightChar, tex_SherlockThinking);
 
 function Update () { 
 	if(Input.GetButtonDown("talk") && currLine < lines.Length){
-			Speak(lines[currLine]); 
-			currLine++;
+		Speak(lines[currLine]); 
+		currLine++;
 	}
 }
 
