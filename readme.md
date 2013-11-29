@@ -4,6 +4,8 @@
 
 ###Main
 
+Press left ctrl to see dialogs
+
 Implemented a `line` class and `Speak` function that will: 
 
 1. display corresponding character name and dialog content; 
