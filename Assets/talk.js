@@ -41,6 +41,7 @@ var tex_JohnNeutral : Texture;
 var tex_JohnAnnoyed : Texture;
 var tex_SherlockNeutral : Texture;
 var tex_SherlockThinking : Texture;
+var tex_dialogBox:Texture;
 
 function Start () {
 	currLine = 0;
@@ -50,7 +51,7 @@ function Start () {
 var lines:line[];
 lines = new line[4];
 lines[0] = new line("John", "Sherlock, have you got a minute? ", leftChar, tex_JohnNeutral);
-lines[1] = new line("Sherlock", "I have several. They stretch before me in a never ending stream of tedium",rightChar, tex_SherlockNeutral);
+lines[1] = new line("Sherlock", "I have several. They stretch before me \n in a never ending stream of tedium",rightChar, tex_SherlockNeutral);
 lines[2] = new line("John", "Dimmock just texted me about a case..",leftChar, tex_JohnAnnoyed);
 lines[3] = new line("Sherlock", "No",rightChar, tex_SherlockThinking);
 
@@ -76,7 +77,10 @@ function scrollText(lineGUI:GUIText, text:String){
 		displayText += text[i];
 		lineGUI.text = displayText;
 		yield WaitForSeconds(1/scrollSpeed);
-		audio.PlayOneShot(charSound);
+		if(text[i] == "\n"){
+			audio.PlayOneShot(lineSound);}
+		else{
+			audio.PlayOneShot(charSound);}
 	}
 }
 
