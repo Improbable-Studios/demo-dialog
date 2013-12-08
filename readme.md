@@ -5,7 +5,7 @@
 
 ### Instructions
 
-0. Download the "unity.package" and import into your unity project. Open the scene "dialog.unity"
+0. Download the `dialog.unitypackage` and import into your (empty) unity project. Open the scene `dialog.unity`
 
 1. Go to Edit --> Project settings --> Input and create a new input control with name "talk" and positive button = "left ctrl"
 
