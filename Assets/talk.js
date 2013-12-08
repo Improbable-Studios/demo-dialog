@@ -3,9 +3,8 @@ mock dialog system for game Sherlock
 Xiayun Sun
 
 TODO:
-1. add sound + typing effect.  
+1. switch to GUI.Box?
 2. change brightness of the texture? 
-3. line should always center
 */
 
 #pragma strict

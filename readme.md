@@ -15,7 +15,7 @@
 
 Global variables:
 
-1. `scrollSpeed`: `int`, how many characters per second, set to 20 currently
+1. `scrollSpeed`: `int`, how many characters per second, set to 10 currently
 
 Implemented a `line` class and `Speak` function that will: 
 
@@ -24,6 +24,6 @@ Implemented a `line` class and `Speak` function that will:
 
 ###To do: 
 
-* line breaks (may switch to use `GUI.Box`?)
+* may switch to use `GUI.Box`?
 * change brightness of out-of-focus character
 * line should always center in the dialog box
