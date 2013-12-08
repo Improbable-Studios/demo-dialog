@@ -12,6 +12,9 @@ TODO:
 
 var lineGUI:GUIText; 
 var charNameGUI: GUIText; 
+var scrollSpeed:int;
+var charSound:AudioClip;
+var lineSound:AudioClip;
 
 //GUITexture, displaying different texture while talking
 var leftChar:GUITexture; 
@@ -22,7 +25,7 @@ class line {
 	var name : String; // character name
 	var text : String; // talk text
 	var charTextureGUI : GUITexture; // character display
-	var charTexture:Texture; // resource path of the GUITexture
+	var charTexture:Texture; // resource for the GUITexture
 
 	function line(name : String, text : String, charTextureGUI:GUITexture, charTexture:Texture){
 		this.name = name;
@@ -43,7 +46,7 @@ function Start () {
 	currLine = 0;
 }
 
-// these are actual contents input
+// initiate actual dialogue contents
 var lines:line[];
 lines = new line[4];
 lines[0] = new line("John", "Sherlock, have you got a minute? ", leftChar, tex_JohnNeutral);
@@ -62,7 +65,21 @@ function Update () {
 function Speak(ln:line){
 	// main function for speak
 	charNameGUI.text = ln.name;
-	lineGUI.text = ln.text;
+	scrollText(lineGUI, ln.text);
 	ln.charTextureGUI.texture = ln.charTexture;
-	
 }
+
+function scrollText(lineGUI:GUIText, text:String){
+	// scroll-display text
+	var displayText:String = "";
+	for (var i:int = 0; i < text.Length; i++){
+		displayText += text[i];
+		lineGUI.text = displayText;
+		yield WaitForSeconds(1/scrollSpeed);
+		audio.PlayOneShot(charSound);
+	}
+}
+
+
+
+

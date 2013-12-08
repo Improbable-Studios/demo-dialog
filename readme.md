@@ -1,6 +1,7 @@
 ###Resources:
 
 * [Here](http://cgcookie.com/unity/2012/02/20/unity-script-npc-talk-system/) is a good tutorial on how to use Unity for a dialog system. 
+* Scrolling effect: display one char at a time + time delay
 
 ### Instructions
 
@@ -12,6 +13,10 @@
 
 ###Main
 
+Global variables:
+
+1. `scrollSpeed`: `int`, how many characters per second, set to 20 currently
+
 Implemented a `line` class and `Speak` function that will: 
 
 1. display corresponding character name and dialog content; 
@@ -19,6 +24,6 @@ Implemented a `line` class and `Speak` function that will:
 
 ###To do: 
 
-* typing + sound effect
+* line breaks (may switch to use `GUI.Box`?)
 * change brightness of out-of-focus character
 * line should always center in the dialog box
